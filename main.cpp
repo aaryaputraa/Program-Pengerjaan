@@ -1,25 +1,25 @@
 #include <iostream>
+#include <cmath>
 #include <string>
 
 int main() {
-    std::string nama;  // Use std::string for the name
-    double alas, tinggi;
+    std::string nama;
+    const double pi = 3.14159;
+    double jariJari;
 
-    // Input nama
     std::cout << "Masukkan Nama: ";
     std::getline(std::cin, nama);
 
-    // Input alas dan tinggi
-    std::cout << "Masukkan alas: ";
-    std::cin >> alas;
-    std::cout << "Masukkan tinggi: ";
-    std::cin >> tinggi;
+    // Input jari-jari
+    std::cout << "Masukkan jari-jari lingkaran: ";
+    std::cin >> jariJari;
 
     // Hitung luas
-    double luas = 0.5 * alas * tinggi;
+    double luas = pi * pow(jariJari, 2);
 
     // Output luas
-    std::cout << nama << " - Luas segitiga: " << luas << std::endl;
+   std::cout << nama << " - Luas lingkaran: " << luas << std::endl;
+
 
     return 0;
 }
